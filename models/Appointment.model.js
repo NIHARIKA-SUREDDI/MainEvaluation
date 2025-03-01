@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const AppointmentSchema=new mongoose.Schema({
     patientId:{type:mongoose.Schema.Types.ObjectId,ref:'user'},
     doctorId:{type:mongoose.Schema.Types.ObjectId,ref:'doctor'},
-    appointmentDateTime:{type:DateTime},
+    // appointmentDateTime:{type:getDate()},
     symptoms:{type:String},
     fees:{type:Number},
     prescription:{type:String},
@@ -12,4 +12,4 @@ const AppointmentSchema=new mongoose.Schema({
 });
 
 const AppointmentModel=mongoose.model('appointment',AppointmentSchema);
-module.exports=AppointmentModel;
+module.exports=AppointmentModel
