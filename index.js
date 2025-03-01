@@ -2,6 +2,7 @@ const express=require('express');
 const connectdb = require('./config/db');
 const AuthenticationRouter = require('./routes/Authentication.routes');
 const AdminRouter = require('./routes/Admin.routes');
+const patientRouter = require('./routes/Patient.routes');
 require('dotenv').config();
 
 const app=express();
@@ -20,6 +21,7 @@ app.get('/',(req,res)=>{
 //routes
 app.use('/user',AuthenticationRouter);
 app.use('/users', AdminRouter);
+app.use('/user',patientRouter);
 
 //server
 app.listen(PORT,async()=>{
