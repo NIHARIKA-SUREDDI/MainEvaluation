@@ -5,9 +5,9 @@ const userSchema=new mongoose.Schema({
     email:{type:String,unique:true},
     mobilenumber:{type:String},
     password:{type:String,default:"@123"},
-    role:{type:String,enum:['admin','doctor','patient'],default:"doctors"},
+    role:{type:String,enum:['admin','doctor','patient']},
     specialisation:{enum:['nerves','heart','lungs','skin',]},
-    availableDays:{enum:['Sun','Mon','Tue','Wed','Thur','Fri','Sat'],default:"doctors"},
+    availableDays:{enum:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']},
 
 });
 
